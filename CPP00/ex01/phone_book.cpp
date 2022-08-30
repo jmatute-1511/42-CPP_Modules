@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 17:59:35 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/08/28 20:07:19 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/08/30 18:14:38 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void	phone_book::_display_contacts(){
 	else{
 		std::stringstream toint(str);
 		toint >> index;
-		if (index >= 0 && index < MAX_CONTACTS){
+		if (index >= 0 && index < MAX_CONTACTS && !book_contacts[index].get_arg(0).empty()){
 			std::cout << "INDEX     |" << "FIRST NAME|" << "LAST NAME |" << "NICKNMAE  |" << "PHONE NBR |" << std::endl;
 			std::cout << std::setfill(' ') << std::setw(10);
 			std::cout << index;

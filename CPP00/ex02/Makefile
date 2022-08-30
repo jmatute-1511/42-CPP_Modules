@@ -5,33 +5,32 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/08/28 19:14:32 by jmatute-          #+#    #+#              #
-#    Updated: 2022/08/28 19:23:34 by jmatute-         ###   ########.fr        #
+#    Created: 2022/08/26 17:28:27 by jmatute-          #+#    #+#              #
+#    Updated: 2022/08/29 17:22:51 by jmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= contact.cpp phone_book.cpp main.cpp
-
+SRCS	= 	test.cpp Account.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 
-NAME	= phone_book
+NAME	= info_bank
 
-CXX		= g++ 
+CXX		= clang++
 
 RM		= rm -f
 
-CXXFLAGS=  -std=c++98
-	
-${NAME}:	${OBJS} Makefile 
-			${CXX} ${CXXFLAGS} ${OBJS} -o ${NAME}  
+CXXLAGS	= -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 
+
+${NAME}:	${OBJS} Makefile Account.hpp
+			@${CXX} ${CXXFLAGS}  ${OBJS} -o ${NAME}
 			@echo "COMPILATION IS FINISHED"
 
 all:		${NAME}
 
 clean:
-			${RM} ${OBJS} l
+			${RM} ${OBJS}
 
 fclean:		clean
 			${RM} ${NAME}
