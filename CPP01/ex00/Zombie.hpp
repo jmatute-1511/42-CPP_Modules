@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phone_book.hpp                                     :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/28 17:50:42 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/04 21:20:55 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/08/31 17:01:20 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/08/31 17:40:59 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONE_BOOK_HPP
-# define PHONE_BOOK_HPP
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
 
-#include "contact.hpp"
-#include <iostream>
-#include <iomanip>
-#include <sstream>
+# include <iostream>
 
-#define MAX_CONTACTS 8
 
-class phone_book
+class Zombie
 {
 	public:
-		contact		book_contacts[MAX_CONTACTS];
-		void 		init_phonebook(void);
 		
-		phone_book();
-		~phone_book();
+		Zombie();
+		Zombie(std::string name);
+		~Zombie();
+		
+		void	anounce(void);
+		
 	private:
-		void	_display_contacts();
-		int		_add_contacts(int n_contact);
-		
+		std::string		_name;
+	
 };
+
+Zombie* newZombie( std::string name );
+void randomChump( std::string name );
 
 #endif

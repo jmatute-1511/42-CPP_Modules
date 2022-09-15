@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phone_book.hpp                                     :+:      :+:    :+:   */
+/*   Human_A.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/28 17:50:42 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/04 21:20:55 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/09/01 17:36:08 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/09/04 16:44:53 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONE_BOOK_HPP
-# define PHONE_BOOK_HPP
-
-#include "contact.hpp"
+#ifndef HUMAN_A_HPP
+# define HUMAN_A_HPP
+#include "Weapon.hpp"
 #include <iostream>
-#include <iomanip>
-#include <sstream>
 
-#define MAX_CONTACTS 8
-
-class phone_book
+class Human_A
 {
-	public:
-		contact		book_contacts[MAX_CONTACTS];
-		void 		init_phonebook(void);
-		
-		phone_book();
-		~phone_book();
-	private:
-		void	_display_contacts();
-		int		_add_contacts(int n_contact);
-		
+private:
+	std::string		_name;
+	Weapon&			_weapon;
+	 
+public:
+
+	void        set_arg(std::string new_str);
+	std::string get_arg();
+	void        atack();
+	Human_A(std::string name, Weapon& new_weapon);
+	~Human_A();
 };
 
 #endif

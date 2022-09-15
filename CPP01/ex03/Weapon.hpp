@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phone_book.hpp                                     :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/28 17:50:42 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/04 21:20:55 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/09/01 17:27:51 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/09/04 16:42:09 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONE_BOOK_HPP
-# define PHONE_BOOK_HPP
 
-#include "contact.hpp"
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
+
 #include <iostream>
-#include <iomanip>
-#include <sstream>
 
-#define MAX_CONTACTS 8
-
-class phone_book
+class Weapon
 {
-	public:
-		contact		book_contacts[MAX_CONTACTS];
-		void 		init_phonebook(void);
-		
-		phone_book();
-		~phone_book();
-	private:
-		void	_display_contacts();
-		int		_add_contacts(int n_contact);
-		
+private:
+    std::string     _type;
+    
+public:
+    
+    std::string     get_type();
+    void            set_type(std::string new_type);
+    
+    Weapon(std::string Wname);
+    ~Weapon();
 };
-
 #endif

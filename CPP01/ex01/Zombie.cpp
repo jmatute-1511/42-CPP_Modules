@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phone_book.hpp                                     :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/28 17:50:42 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/04 21:20:55 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/08/31 17:12:31 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/08/31 18:02:52 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONE_BOOK_HPP
-# define PHONE_BOOK_HPP
+#include "Zombie.hpp"
 
-#include "contact.hpp"
-#include <iostream>
-#include <iomanip>
-#include <sstream>
 
-#define MAX_CONTACTS 8
+Zombie::Zombie(){
+    this->_name = "Michael Jackson(Thriller)";    
+}
 
-class phone_book
-{
-	public:
-		contact		book_contacts[MAX_CONTACTS];
-		void 		init_phonebook(void);
-		
-		phone_book();
-		~phone_book();
-	private:
-		void	_display_contacts();
-		int		_add_contacts(int n_contact);
-		
-};
+Zombie::Zombie(std::string name){
+    this->_name = name;
+}
 
-#endif
+Zombie::~Zombie(){
+    std::cout << this->_name << " has go to the hell." << std::endl;
+}
+
+void Zombie::anounce(){
+    std::cout << this->_name << " BraiiiiiiinnnzzzZ..." << std::endl; 
+}
+void Zombie::st_arg(std::string name){
+    this->_name = name;
+}

@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 17:59:35 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/08/30 18:14:38 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/04 21:25:57 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		phone_book::_add_contacts(int n_contact){
 
 	it = 0;
 	last_contact = 0;
-	if (n_contact > MAX_CONTACTS)
+	if (n_contact + 1 > MAX_CONTACTS)
 		last_contact = n_contact % MAX_CONTACTS;
 	else
 		last_contact = n_contact;
@@ -72,7 +72,7 @@ void	phone_book::_display_contacts(){
 	std::cout << std::endl;
 	if (str == "ALL"){		
 		std::cout << "INDEX     |" << "FIRST NAME|" << "LAST NAME |" << "NICKNMAE  |" << "PHONE NBR |" << std::endl;
-		for (int it = 0; it <= MAX_CONTACTS && !book_contacts[it].get_arg(0).empty(); it++)
+		for (int it = 0; it < MAX_CONTACTS && !book_contacts[it].get_arg(0).empty(); it++)
 		{
 			std::cout << std::setfill(' ') << std::setw(10);
 			std::cout << it;

@@ -1,37 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phone_book.hpp                                     :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/28 17:50:42 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/04 21:20:55 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/09/13 18:31:31 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/09/13 19:02:55 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONE_BOOK_HPP
-# define PHONE_BOOK_HPP
-
-#include "contact.hpp"
 #include <iostream>
-#include <iomanip>
-#include <sstream>
 
-#define MAX_CONTACTS 8
-
-class phone_book
-{
-	public:
-		contact		book_contacts[MAX_CONTACTS];
-		void 		init_phonebook(void);
-		
-		phone_book();
-		~phone_book();
-	private:
-		void	_display_contacts();
-		int		_add_contacts(int n_contact);
-		
-};
-
-#endif

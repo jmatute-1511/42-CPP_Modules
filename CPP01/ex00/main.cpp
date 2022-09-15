@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phone_book.hpp                                     :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/28 17:50:42 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/04 21:20:55 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/08/31 17:28:13 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/08/31 17:50:13 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONE_BOOK_HPP
-# define PHONE_BOOK_HPP
 
-#include "contact.hpp"
-#include <iostream>
-#include <iomanip>
-#include <sstream>
+#include "Zombie.hpp"
 
-#define MAX_CONTACTS 8
+int main(void){
 
-class phone_book
-{
-	public:
-		contact		book_contacts[MAX_CONTACTS];
-		void 		init_phonebook(void);
-		
-		phone_book();
-		~phone_book();
-	private:
-		void	_display_contacts();
-		int		_add_contacts(int n_contact);
-		
-};
-
-#endif
+    Zombie  Michael_Jackson;
+    Zombie *new_zombie;
+    
+    Michael_Jackson.anounce();
+    
+    new_zombie = newZombie("Billy Butcherson");
+    new_zombie->anounce();
+    randomChump("Ed");
+    new_zombie->~Zombie();
+}

@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phone_book.hpp                                     :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/28 17:50:42 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/04 21:20:55 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/09/13 17:37:25 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/09/13 19:47:07 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONE_BOOK_HPP
-# define PHONE_BOOK_HPP
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
-#include "contact.hpp"
 #include <iostream>
-#include <iomanip>
-#include <sstream>
 
-#define MAX_CONTACTS 8
-
-class phone_book
+class Fixed
 {
-	public:
-		contact		book_contacts[MAX_CONTACTS];
-		void 		init_phonebook(void);
-		
-		phone_book();
-		~phone_book();
 	private:
-		void	_display_contacts();
-		int		_add_contacts(int n_contact);
+		int	_nb;
+		static const int	_rawbit = 8;
 		
+	public:
+		int getRawBits( void ) const;
+		void setRawBits ( int const raw ); 
+		Fixed();
+		Fixed(Fixed& newfix);
+		~Fixed();
+	void	operator=(Fixed& fix);
 };
 
 #endif
