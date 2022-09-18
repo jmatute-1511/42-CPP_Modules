@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 17:37:25 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/18 15:52:16 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/18 15:54:59 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,7 @@ class Fixed
 		Fixed	operator ++(int);
 		Fixed&	operator --();
 		Fixed	operator --(int);
-		Fixed&	operator = (Fixed const& fix);
-
+		Fixed&	operator = (Fixed const & fix);
 
 		static Fixed& min(Fixed& n1, Fixed& n2);
 		static Fixed& max(Fixed& n1, Fixed& n2);

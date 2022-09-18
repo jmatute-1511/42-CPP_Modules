@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 17:51:57 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/13 18:18:09 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/18 15:48:51 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Fixed::Fixed(Fixed& newfix){
     Fixed::operator=(newfix);
 }
 
-void   Fixed::operator=(Fixed& fix){
+Fixed&   Fixed::operator=(Fixed const& fix){
     std::cout << "Assignation operator called" << std::endl;
     this->_nb = fix.getRawBits();
 }

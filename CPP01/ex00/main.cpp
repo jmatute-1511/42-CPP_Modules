@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 17:28:13 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/08/31 17:50:13 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/18 15:08:39 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int main(void){
     
     new_zombie = newZombie("Billy Butcherson");
     new_zombie->anounce();
-    randomChump("Ed");
+    randomChump("Edie");
     new_zombie->~Zombie();
 }

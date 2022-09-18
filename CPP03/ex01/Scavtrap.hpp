@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Scavtrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 17:28:13 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/18 15:09:35 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/09/18 08:15:20 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/09/18 08:38:22 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
 
-#include "Zombie.hpp"
+#include "Claptrap.hpp"
 
-int main(void){
+class Scavtrap: public Claptrap
+{
+	public:
+		void attack(std::string const & target);
+		void gurdgate();
+		Scavtrap();
+		Scavtrap(std::string	new_name);
+		~Scavtrap();
+};
 
-    Zombie *array;
-    
-    array = zombieHorde(10, "lolo");
-    for (int it = 0; it < 10; it++)
-        array[it].anounce();
-    
-    delete[] array;
-}
+#endif

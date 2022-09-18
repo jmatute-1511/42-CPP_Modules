@@ -5,21 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 17:28:13 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/18 15:09:35 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/09/18 07:39:54 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/09/18 08:01:11 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Claptrap.hpp"
 
-#include "Zombie.hpp"
+int  main(){
+    Claptrap Joe = Claptrap("JOE");
+    Claptrap Adan = Claptrap("ADAN");
 
-int main(void){
-
-    Zombie *array;
-    
-    array = zombieHorde(10, "lolo");
-    for (int it = 0; it < 10; it++)
-        array[it].anounce();
-    
-    delete[] array;
+    Joe.set_atack_damage(3);
+    Joe.attack("escopeta");
+    Adan.set_atack_damage(9);
+    Adan.attack("metralleta");
+    Adan.takeDamage(3);
+    Joe.takeDamage(9);
+    Adan.attack("cuchillo");
+    Adan.set_atack_damage(6);
+    Joe.takeDamage(6);
+    Joe.beRepaired(9);
+    Adan.beRepaired(6);
 }

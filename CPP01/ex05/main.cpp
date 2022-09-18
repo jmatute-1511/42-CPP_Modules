@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 15:55:21 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/08 16:01:06 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/18 15:20:03 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ int main (){
 
 	Karen	Crazy_Karen;
 
-	Crazy_Karen.complains("HOLA");
+	Crazy_Karen.complains("INFO");
 	return (0);
 }

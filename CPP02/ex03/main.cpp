@@ -5,21 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 17:28:13 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/18 15:09:35 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/09/17 18:50:56 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/09/18 17:55:50 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include "Zombie.hpp"
+#include "Point.hpp"
 
 int main(void){
+    Point   A = Point(0.0f, 1.0f);
+    Point   B = Point(-1.0f,-1.0f);
+    Point   C = Point(1.0f, -1.0f);
+    Point   point = Point(0.5f,0.0f);
 
-    Zombie *array;
+    bool bolean = bsp(A,B,C,point);
     
-    array = zombieHorde(10, "lolo");
-    for (int it = 0; it < 10; it++)
-        array[it].anounce();
-    
-    delete[] array;
+    std::cout << bolean << std::endl;
 }

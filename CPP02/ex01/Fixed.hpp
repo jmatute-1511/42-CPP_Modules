@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 17:37:25 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/16 02:49:19 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/18 15:49:44 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ class Fixed
 		Fixed(int nb_int);
 		Fixed(float nb_float);
 		Fixed(const Fixed& newfix);
+
+		Fixed&	operator = (Fixed const & fix);
 		~Fixed();
 };
 std::ostream& operator<<(std::ostream & out, const Fixed &num);
