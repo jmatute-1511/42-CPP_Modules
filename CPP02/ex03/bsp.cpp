@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 18:19:04 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/18 17:48:24 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/19 21:48:52 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,7 @@ bool bsp( Point const A, Point const B, Point const C, Point const P )
 
     float total = ABP + ACP + BCP;
     
-    std::cout << total  << std::endl << ABC << std::endl;
-    // std::cout << ABP  << std::endl << ABC << std::endl;
-    // std::cout << ACP  << std::endl << ABC << std::endl;
-    // std::cout << BCP  << std::endl << ABC << std::endl;
-    
-    
-    if ((ABC || ABP || ACP || BCP) == 0.0f)
+   if (ABC == 0.0f || ABP == 0.0f || ACP == 0.0f || BCP == 0.0f)
         return false;
     if ( total == ABC)
         return true;

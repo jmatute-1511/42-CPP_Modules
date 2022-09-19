@@ -6,7 +6,7 @@
 #    By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/17 18:41:05 by jmatute-          #+#    #+#              #
-#    Updated: 2022/09/13 18:04:55 by jmatute-         ###   ########.fr        #
+#    Updated: 2022/09/19 21:54:40 by jmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ CXX		= clang++
 
 RM		= rm -f
 
-CXXLAGS	= -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 
 
 ${NAME}:	${OBJS} Makefile 

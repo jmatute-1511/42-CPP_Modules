@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 17:37:25 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/18 15:48:13 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/19 21:32:10 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Fixed
 		Fixed();
 		Fixed(Fixed& newfix);
 		~Fixed();
-	Fixed&	operator = (Fixed const& fix);
+	void	operator=(Fixed& fix);
 };
 
 #endif
