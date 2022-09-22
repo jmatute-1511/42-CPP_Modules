@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 02:14:30 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/20 18:53:37 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/20 19:45:59 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class Claptrap
 		int	get_energy_points() const;
 		int	get_atack_damage() const;
 
+		void set_name(std::string name);
 		void set_hitpoints(int new_hp);
 		void set_energy_points(int new_ep);
 		void set_atack_damage(int new_at);
@@ -43,8 +44,7 @@ class Claptrap
 		Claptrap(std::string name);
 		Claptrap(Claptrap const & new_other);
 		~Claptrap();
-		
-		Claptrap& operator=(Claptrap const & equal);
+	Claptrap& operator=(Claptrap const & equal);
 };
 
 #endif

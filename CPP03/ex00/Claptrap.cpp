@@ -6,17 +6,17 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 02:19:08 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/18 18:00:25 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/20 18:36:20 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Claptrap.hpp"
 
-Claptrap::Claptrap(): _hitpoints(10) ,_energy_points(10), _atack_damage(0), _name("default"){
+Claptrap::Claptrap(): _name("default"), _hitpoints(10) , _energy_points(10), _atack_damage(0){
     std::cout << this->_name <<" Constructor called" << std::endl;
 }
     
-Claptrap::Claptrap(std::string name): _hitpoints(10) ,_energy_points(10), _atack_damage(0), _name(name){
+Claptrap::Claptrap(std::string name):  _name(name), _hitpoints(10) , _energy_points(10), _atack_damage(0){
     std::cout << this->_name <<" Constructor called" << std::endl;
 }
 
@@ -24,11 +24,8 @@ Claptrap::~Claptrap(){
     std::cout<< "Destructor of "<< this->_name << " called" << std::endl;
 }
 
-Claptrap::Claptrap(Claptrap& cpy){
-    this->_name = cpy.get_name();
-    this->_hitpoints = cpy.get_hitpoints();
-    this->_energy_points = cpy.get_energy_points();
-    this->_atack_damage = cpy.get_atack_damage();
+Claptrap::Claptrap(Claptrap const & cpy){
+    Claptrap::operator=(cpy);
 }
 
 void Claptrap::attack(std::string const & target){
@@ -62,23 +59,28 @@ void Claptrap::beRepaired(unsigned int amount){
     }
 }
 
-Claptrap& Claptrap::operator=(Claptrap  & equal){
-    return equal;
+Claptrap& Claptrap::operator=(Claptrap  const &equal){
+    
+    this->_name = equal.get_name();
+    this->_hitpoints = equal.get_hitpoints();
+    this->_energy_points = equal.get_energy_points();
+    this->_atack_damage = equal.get_atack_damage()  ;
+    return *this;
 }
 
-std::string Claptrap::get_name(){
+std::string Claptrap::get_name() const{
     return this->_name;
 }
 
-int Claptrap::get_hitpoints(){
+int Claptrap::get_hitpoints() const{
     return this->_hitpoints;
 }
 
-int Claptrap::get_energy_points(){
+int Claptrap::get_energy_points() const{
     return this->_energy_points;
 }
 
-int Claptrap::get_atack_damage(){
+int Claptrap::get_atack_damage()const {
     return this->_atack_damage;
 }
 

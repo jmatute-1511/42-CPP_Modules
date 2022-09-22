@@ -6,16 +6,17 @@
 #    By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/17 18:41:05 by jmatute-          #+#    #+#              #
-#    Updated: 2022/09/20 01:23:01 by jmatute-         ###   ########.fr        #
+#    Updated: 2022/09/20 19:51:58 by jmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= 	main.cpp Claptrap.cpp
+SRCS	= 	main.cpp Claptrap.cpp Scavtrap.cpp Fragtrap.cpp Diamondtrap.cpp
 
 
 OBJS	= ${SRCS:.cpp=.o}
 
-NAME	= Claptrap
+NAME	= Diamondtrap
+
 CXX		= clang++
 
 RM		= rm -f

@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Scavtrap.hpp                                       :+:      :+:    :+:   */
+/*   Diamondtrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/18 08:15:20 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/20 18:41:38 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/09/20 18:05:34 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/09/22 15:49:52 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#ifndef DIAMONDTRAP_HPP
+#define DIAMONDTRAP_HPP
 
-#include "Claptrap.hpp"
+#include "Fragtrap.hpp"
+#include "Scavtrap.hpp"
 
-class Scavtrap: public Claptrap
+class Diamondtrap: public Fragtrap, public Scavtrap
 {
 	public:
-		void attack(std::string const & target);
-		void gurdgate();
-		Scavtrap();
-		Scavtrap(std::string	new_name);
-		Scavtrap(Scavtrap const &other);
-		~Scavtrap();
-	Scavtrap&	operator = (Scavtrap const & other);
+		Diamondtrap();
+		Diamondtrap(std::string	name);
+		Diamondtrap( const Diamondtrap& new_diamond);
+		
+		~Diamondtrap();
+
+		void	attack(std::string const & target);
+		void	whoAmI();
+
+		Diamondtrap& operator=(Diamondtrap const & cpy);
 };
+
 
 #endif

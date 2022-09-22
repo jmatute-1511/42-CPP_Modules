@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 02:14:30 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/18 18:00:41 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/20 18:35:52 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ class Claptrap
 		
 	public:
 		
-		std::string	get_name();
-		int	get_hitpoints();
-		int	get_energy_points();
-		int	get_atack_damage();
+		std::string	get_name() const;
+		int	get_hitpoints() const;
+		int	get_energy_points() const;
+		int	get_atack_damage() const;
 
 		void set_hitpoints(int new_hp);
 		void set_energy_points(int new_ep);
@@ -40,11 +40,11 @@ class Claptrap
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 		Claptrap();
-		Claptrap(Claptrap& cpy);
+		Claptrap(Claptrap  const & cpy);
 		Claptrap(std::string name);
 		~Claptrap();
 
-		Claptrap& operator=(Claptrap  & equal);
+		Claptrap& operator=(Claptrap const & equal);
 };
 
 #endif

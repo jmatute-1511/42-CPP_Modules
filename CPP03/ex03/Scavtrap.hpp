@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 08:15:20 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/20 18:41:38 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/20 19:14:12 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "Claptrap.hpp"
 
-class Scavtrap: public Claptrap
+class Scavtrap: virtual public Claptrap
 {
 	public:
 		void attack(std::string const & target);
@@ -24,6 +24,7 @@ class Scavtrap: public Claptrap
 		Scavtrap(std::string	new_name);
 		Scavtrap(Scavtrap const &other);
 		~Scavtrap();
+		
 	Scavtrap&	operator = (Scavtrap const & other);
 };
 

@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 08:21:43 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/20 18:46:08 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/20 19:14:08 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,3 +55,4 @@ Scavtrap& Scavtrap::operator=( Scavtrap const & other){
     this->_atack_damage = other.get_atack_damage();
     return *this;    
 }
+

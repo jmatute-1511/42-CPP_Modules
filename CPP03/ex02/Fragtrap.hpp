@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Scavtrap.hpp                                       :+:      :+:    :+:   */
+/*   Fragtrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/18 08:15:20 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/20 18:41:38 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/09/20 01:25:52 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/09/20 18:47:58 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
+#include <iostream>
 #include "Claptrap.hpp"
 
-class Scavtrap: public Claptrap
+class Fragtrap: public Claptrap
 {
 	public:
-		void attack(std::string const & target);
-		void gurdgate();
-		Scavtrap();
-		Scavtrap(std::string	new_name);
-		Scavtrap(Scavtrap const &other);
-		~Scavtrap();
-	Scavtrap&	operator = (Scavtrap const & other);
+		void	attack(std::string const & target);
+		void	highFivesGuys(void);
+		Fragtrap();
+		Fragtrap(std::string name);
+		Fragtrap(Fragtrap const & other);
+		~Fragtrap();
+	Fragtrap& operator = (Fragtrap const & other);
 };
 
 #endif
