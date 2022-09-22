@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 02:19:08 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/20 19:56:31 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/22 16:04:21 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Claptrap::Claptrap(): _name("default"), _hitpoints(10) , _energy_points(10), _at
 }
     
 Claptrap::Claptrap(std::string name): _name(name), _hitpoints(10) , _energy_points(10), _atack_damage(0){
-    std::cout << this->_name <<" Constructor called" << std::endl;
+    std::cout << "Claptrap " << this->_name <<" Constructor called" << std::endl;
 }
 
 Claptrap::Claptrap(Claptrap const & other){
