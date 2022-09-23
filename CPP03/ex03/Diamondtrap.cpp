@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 18:57:00 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/22 15:53:53 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/23 16:49:40 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ Diamondtrap::Diamondtrap(): Fragtrap(), Scavtrap(){
 }
 
 Diamondtrap::Diamondtrap(std::string name): Claptrap(name + "_clap_name"), Fragtrap(name), Scavtrap(name){
+    this->_name = name;
     this->_hitpoints = this->Fragtrap::get_hitpoints();
-    this->_energy_points = this->Scavtrap::get_energy_points();
     this->_atack_damage = this->Fragtrap::get_atack_damage(); 
     std::cout << "DiamondTrap " << this->_name << " constructor called" << std::endl;
 }
@@ -63,16 +63,12 @@ void Diamondtrap::whoAmI(){
     std::cout << "Atack_damage : " << this->_atack_damage << std::endl;
 }
 
-// std::string Diamondtrap::getName()const{
-//     return this->_name;   
-// }
+std::string     Diamondtrap::get_Dname(){
+    return this->_name;
+}
 
-// void Diamondtrap::setName(std::string name){
-
-//     std::string aux =  name;
-//     this->Claptrap::set_name(name.append("_clap_name"));
-//     this->_name = aux;
-    
-// }
+void    Diamondtrap::set_Dname(std::string  name){
+    this->_name = name;
+}
 
 

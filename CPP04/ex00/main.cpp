@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Scavtrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/18 08:15:20 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/22 18:32:46 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/09/22 17:41:46 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/09/23 16:55:33 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#include "Cat.hpp"
+#include "Dog.hpp"
 
-#include "Claptrap.hpp"
-
-class Scavtrap: virtual public Claptrap
-{
-	public:
-		void attack(std::string const & target);
-		void gurdgate();
-		Scavtrap();
-		Scavtrap(std::string	new_name);
-		Scavtrap(Scavtrap const &other);
-		virtual ~Scavtrap();
-		
-	Scavtrap&	operator = (Scavtrap const & other);
-};
-
-#endif
+int main(){
+    
+    const Animal* meta = new Animal();
+    const Animal* j = new Dog();
+    const Animal* i = new Cat();
+    std::cout << j->getType() << " " << std::endl;
+    std::cout << i->getType() << " " << std::endl;
+    i->makeSound();
+    j->makeSound();
+    meta->makeSound();
+    
+    delete  meta;
+    delete  j;
+    delete  i;
+}

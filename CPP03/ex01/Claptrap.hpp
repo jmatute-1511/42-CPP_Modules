@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 02:14:30 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/20 18:53:37 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/22 18:34:24 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ class Claptrap
 		Claptrap();
 		Claptrap(std::string name);
 		Claptrap(Claptrap const & new_other);
-		~Claptrap();
+		virtual ~Claptrap();
 		
 		Claptrap& operator=(Claptrap const & equal);
 };

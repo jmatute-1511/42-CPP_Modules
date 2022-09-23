@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Scavtrap.hpp                                       :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/18 08:15:20 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/22 18:32:46 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/09/23 20:46:18 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/09/23 21:02:57 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
 
-#include "Claptrap.hpp"
+#include <iostream>
 
-class Scavtrap: virtual public Claptrap
+class Brain
 {
+	private:
+		std::string		_ideas[100];
 	public:
-		void attack(std::string const & target);
-		void gurdgate();
-		Scavtrap();
-		Scavtrap(std::string	new_name);
-		Scavtrap(Scavtrap const &other);
-		virtual ~Scavtrap();
-		
-	Scavtrap&	operator = (Scavtrap const & other);
+		std::string	get_ideas(int index) const;
+		void set_ideas(int index, std::string other);
+		Brain();
+		Brain(Brain const & other);
+		~Brain();
+	Brain& operator=(Brain const & other);		
 };
 
 #endif

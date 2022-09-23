@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 13:42:26 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/20 18:51:13 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/23 16:44:17 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Fragtrap::Fragtrap(std::string name): Claptrap(name){
      this->_hitpoints = 100;
     this->_energy_points = 100;
     this->_atack_damage = 30;
-    std::cout << "Fragtra "<< this->_name << " constructor caled" << std::endl;
+    std::cout << "Fragtrap "<< this->_name << " constructor called" << std::endl;
 }
 
 Fragtrap::Fragtrap(Fragtrap const & other){

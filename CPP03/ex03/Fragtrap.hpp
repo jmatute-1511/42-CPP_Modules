@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 01:25:52 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/20 19:14:28 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/22 18:32:34 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Fragtrap: virtual public Claptrap
 		Fragtrap();
 		Fragtrap(std::string name);
 		Fragtrap(Fragtrap const & other);
-		~Fragtrap();
+		virtual ~Fragtrap();
 		
 	Fragtrap& operator = (Fragtrap const & other);
 };

@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Scavtrap.hpp                                       :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/18 08:15:20 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/22 18:32:46 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/09/22 16:57:46 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/09/23 20:44:22 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#ifndef CAT_HPP
+#define CAT_HPP
 
-#include "Claptrap.hpp"
-
-class Scavtrap: virtual public Claptrap
+#include "Animal.hpp"
+class Cat: public Animal
 {
 	public:
-		void attack(std::string const & target);
-		void gurdgate();
-		Scavtrap();
-		Scavtrap(std::string	new_name);
-		Scavtrap(Scavtrap const &other);
-		virtual ~Scavtrap();
-		
-	Scavtrap&	operator = (Scavtrap const & other);
+		Cat();
+		Cat(Cat const &  other);
+		~Cat();
+	void makeSound() const;
+	Cat& operator=(Cat const & other);
 };
-
 #endif

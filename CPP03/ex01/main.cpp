@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 07:39:54 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/18 08:51:08 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/23 16:32:45 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int  main(){
     Adan.set_atack_damage(9);
     Adan.attack("metralleta");
     Maria.set_atack_damage(8);
+    Maria.gurdgate();
     Maria.attack("pistola");
     Adan.takeDamage(3);
     Adan.takeDamage(8);
