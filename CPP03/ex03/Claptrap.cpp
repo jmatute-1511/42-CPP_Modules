@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 02:19:08 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/23 16:48:32 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/25 16:03:10 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ Claptrap::Claptrap(Claptrap const & cpy){
 
 void Claptrap::attack(std::string const & target){
     if (this->_hitpoints == 0 || this->_energy_points == 0)
-        std::cout << this->_name << " not have hitpoints or energiy points for execute attack" << std::endl;
+        std::cout << this->_name << " not have hitpoints or energy points for execute attack" << std::endl;
     else{
         std::cout << this->_name << " with " << target <<", causing " << this->_atack_damage << " points of damage!" << std::endl;
         this->_energy_points -= 1;
-        std::cout << this->_name << " have now " << this->_hitpoints << " hitpoints" << std::endl;
+        std::cout << this->_name << " have now " << this->_hitpoints << " energy points" << std::endl;
     }
 }
 

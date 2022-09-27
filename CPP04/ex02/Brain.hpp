@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/22 17:41:46 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/27 10:45:29 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/09/23 20:46:18 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/09/23 21:02:57 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
-#include "Dog.hpp"
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
 
-int main(){
-    
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-    i->makeSound();
-    j->makeSound();
-    meta->makeSound();
-    
-    delete  meta;
-    delete  j;
-    delete  i;
-}
+#include <iostream>
+
+class Brain
+{
+	private:
+		std::string		_ideas[100];
+	public:
+		std::string	get_ideas(int index) const;
+		void set_ideas(int index, std::string other);
+		Brain();
+		Brain(Brain const & other);
+		~Brain();
+	Brain& operator=(Brain const & other);		
+};
+
+#endif

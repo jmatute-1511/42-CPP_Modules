@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 13:42:26 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/22 15:49:38 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/25 16:03:33 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ Fragtrap::~Fragtrap(){
 }
 
 void Fragtrap::attack(std::string const & target){
-        if (this->_hitpoints == 0)
-        std::cout <<  "Fragtrap" << this->_name << " not have hitpoints for execute attack" << std::endl;
+        if (this->_energy_points == 0)
+        std::cout <<  "Fragtrap" << this->_name << " not have enrgy points for execute attack" << std::endl;
     else{
         std::cout << "Fragtrap " <<this->_name << " with " << target <<", causing " << this->_atack_damage << " points of damage!" << std::endl;
-        this->_hitpoints -= 1;
-        std::cout << this->_name << " have now " << this->_hitpoints << " hitpoints" << std::endl;
+        this->_energy_points -= 1;
+        std::cout << this->_name << " have now " << this->_energy_points << " energy points" << std::endl;
     }
 }
 

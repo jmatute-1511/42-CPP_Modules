@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/22 17:41:46 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/27 10:45:29 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/09/26 21:36:31 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/09/26 22:23:28 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
-#include "Dog.hpp"
+#ifndef ICE_HPP
+#define ICE_HPP
 
-int main(){
-    
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-    i->makeSound();
-    j->makeSound();
-    meta->makeSound();
-    
-    delete  meta;
-    delete  j;
-    delete  i;
-}
+#include "Materia.hpp"
+#include "Character.hpp"
+
+class Ice: public AMateria
+{
+	public:
+		Ice();
+		Ice(Ice& other);
+		AMateria* clone() const ;
+		void use(ICharacter& target);
+		~Ice();
+};
+
+#endif

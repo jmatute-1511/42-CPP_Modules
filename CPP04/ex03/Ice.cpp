@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/22 17:41:46 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/27 10:45:29 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/09/26 21:41:21 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/09/26 21:52:09 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
-#include "Dog.hpp"
+#include "Ice.hpp"
 
-int main(){
+Ice::Ice():AMateria("ice"){
+}
+
+Ice::Ice(Ice& other):AMateria(other.getType()){
+}
+
+AMateria* Ice::clone() const {
+    return new Ice();
+}
+void Ice::use(ICharacter& target){
+    std::cout << "* shoots an ice bolt at "<< target.getName() <<" *$" << std::endl;
+}
+Ice::~Ice(){
     
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-    i->makeSound();
-    j->makeSound();
-    meta->makeSound();
-    
-    delete  meta;
-    delete  j;
-    delete  i;
 }

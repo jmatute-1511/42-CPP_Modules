@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 08:21:43 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/20 19:14:08 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/25 16:03:28 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,12 @@ Scavtrap::~Scavtrap(){
 }
 
 void Scavtrap::attack(std::string const & target){
-    if (this->_hitpoints == 0)
-        std::cout << "Scavtrap " << this->_name << " not have hitpoints for execute attack" << std::endl;
+    if (this->_energy_points == 0)
+        std::cout << "Scavtrap " << this->_name << " not have energy points for execute attack" << std::endl;
     else{
         std::cout << "Scavtrap " <<this->_name << " with " << target <<", causing " << this->_atack_damage << " points of damage!" << std::endl;
-        this->_hitpoints -= 1;
-        std::cout << this->_name << " have now " << this->_hitpoints << " hitpoints" << std::endl;
+        this->_energy_points -= 1;
+        std::cout << this->_name << " have now " << this->_energy_points<< " energy points" << std::endl;
     }
 }
 void Scavtrap::gurdgate(){

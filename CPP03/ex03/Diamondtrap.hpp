@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 18:05:34 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/22 18:40:09 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/09/25 15:55:01 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Diamondtrap: public Fragtrap, public Scavtrap
 		
 		std::string get_Dname();
 		void		set_Dname(std::string name);
-		void	attack(std::string const & target);
+		using	Fragtrap::attack;
 		void	whoAmI();
 
 		Diamondtrap& operator=(Diamondtrap const & cpy);

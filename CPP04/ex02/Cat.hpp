@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/22 17:41:46 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/27 10:45:29 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/09/22 16:57:46 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/09/23 21:27:50 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
-#include "Dog.hpp"
+#ifndef CAT_HPP
+#define CAT_HPP
 
-int main(){
-    
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-    i->makeSound();
-    j->makeSound();
-    meta->makeSound();
-    
-    delete  meta;
-    delete  j;
-    delete  i;
-}
+#include "Animal.hpp"
+
+class Cat: public Animal
+{
+	private:
+		Brain *CatBrain;
+	public:
+		Cat();
+		Cat(Cat const & other);
+		~Cat();
+
+	Brain& get_brain() const;
+	void makeSound() const;
+	Cat& operator=(Cat const & other);
+};
+#endif

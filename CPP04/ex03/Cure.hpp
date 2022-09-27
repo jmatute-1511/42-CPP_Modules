@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/22 17:41:46 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/09/27 10:45:29 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/09/26 21:52:25 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/09/26 22:22:50 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
-#include "Dog.hpp"
+#ifndef CURE_HPP
+#define CURE_HPP
 
-int main(){
-    
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-    i->makeSound();
-    j->makeSound();
-    meta->makeSound();
-    
-    delete  meta;
-    delete  j;
-    delete  i;
-}
+#include "Materia.hpp"
+#include "Character.hpp"
+
+class Cure: public AMateria
+{
+	public:
+		Cure();
+		Cure(Cure& other);
+		AMateria* clone() const;
+		void use(ICharacter& target);
+		~Cure();
+};
+#endif
