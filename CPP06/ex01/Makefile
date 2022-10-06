@@ -6,16 +6,16 @@
 #    By: jmatute- <jmatute-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 18:08:09 by jmatute-          #+#    #+#              #
-#    Updated: 2022/10/06 20:09:02 by jmatute-         ###   ########.fr        #
+#    Updated: 2022/10/06 18:10:39 by jmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	=  Convert.cpp main.cpp
+SRCS	= main.cpp
 
 
 OBJS	= ${SRCS:.cpp=.o}
 
-NAME	= convert
+NAME	= serialize
 
 CXX		= g++
 

@@ -5,17 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jmatute- <jmatute-@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/06 18:08:09 by jmatute-          #+#    #+#              #
-#    Updated: 2022/10/06 20:09:02 by jmatute-         ###   ########.fr        #
+#    Created: 2022/10/01 23:00:12 by jmatute-          #+#    #+#              #
+#    Updated: 2022/10/06 20:03:06 by jmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	=  Convert.cpp main.cpp
+SRCS	= 	 main.cpp
 
 
 OBJS	= ${SRCS:.cpp=.o}
 
-NAME	= convert
+NAME	= show_what_is
 
 CXX		= g++
 
