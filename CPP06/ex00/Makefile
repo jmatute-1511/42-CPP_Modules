@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jmatute- <jmatute-@student.42madrid.com    +#+  +:+       +#+         #
+#    By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 18:08:09 by jmatute-          #+#    #+#              #
-#    Updated: 2022/10/06 20:09:02 by jmatute-         ###   ########.fr        #
+#    Updated: 2022/10/07 20:33:08 by jmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,11 +17,11 @@ OBJS	= ${SRCS:.cpp=.o}
 
 NAME	= convert
 
-CXX		= g++
+CXX		= clang++
 
 RM		= rm -f
 
-CXXFLAGS	= -Wall -Wextra -Werror #-std=c++98 #-fsanitize=address
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 
 
 ${NAME}:	${OBJS} Makefile 

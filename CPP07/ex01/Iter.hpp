@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Base.hpp                                           :+:      :+:    :+:   */
+/*   Iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 19:02:20 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/10/07 20:18:34 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/10/08 17:57:28 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/10/08 18:06:48 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BASE_HPP
-#define BASE_HPP
+#ifndef ITER_HPP
+#define ITER_HPP
+#include <iostream>
 
-class Base
-{
-	public:
-	virtual ~Base(void){};
-};
-
-class A:public Base{
-};
-
-class B:public Base{
-};
-
-class C:public Base{
-};
+template <typename T>
+void iter(T *array, size_t len, void (*function)(T &)){
+	for(size_t i = 0; i < len; i++)
+		function(array[i]);
+}
 
 #endif

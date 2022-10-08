@@ -5,42 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 17:52:31 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/10/07 20:15:29 by jmatute-         ###   ########.fr       */
+/*   Created: 2022/10/08 17:57:12 by jmatute-          #+#    #+#             */
+/*   Updated: 2022/10/08 18:15:33 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-
-typedef struct	Data{
-	
-	int interger;
-
-}				Data;
+#include "Iter.hpp"
 
 
-uintptr_t serialize(Data *ptr){
-	uintptr_t serial;
-	serial = reinterpret_cast<uintptr_t>(ptr);
-	return serial;
-}
-
-Data *deserialize(uintptr_t raw){
-	Data *data;
-	data = reinterpret_cast<Data*> (raw);
-	return data;
+template <typename T>
+void power_of_two(T &base){
+	base *= base;
 }
 
 int main(){
-	Data data;
-	uintptr_t ecrypt;
+
+	int array[5] ={ 1, 2, 3, 4, 5};
+	float array_f[5] ={ 1.456f, 2.765f, 3.535f, 4.5f, 5.65f};
+	iter(array, 5, power_of_two);
+	for (size_t i = 0; i < 5; i++){
+		std::cout << array[i] << std::endl;
+	}
+	iter(array_f, 5, power_of_two);
+	for (size_t i = 0; i < 5; i++){
+		std::cout << array_f[i] << std::endl;
+	}
 	
-	data.interger = 20;
-	
-	ecrypt = serialize(&data);
-	std::cout << &data  << std::endl;
-	std::cout << &ecrypt << std::endl;
-	Data* deserialdata = deserialize(ecrypt);
-	std::cout << deserialdata << std::endl ;
-	std::cout << deserialdata->interger << std::endl ;
 }

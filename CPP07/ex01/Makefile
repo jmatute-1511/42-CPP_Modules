@@ -5,17 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/06 18:08:09 by jmatute-          #+#    #+#              #
-#    Updated: 2022/10/07 20:33:17 by jmatute-         ###   ########.fr        #
+#    Created: 2022/10/08 17:56:51 by jmatute-          #+#    #+#              #
+#    Updated: 2022/10/08 17:56:52 by jmatute-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= main.cpp
+SRCS	=  main.cpp
 
 
 OBJS	= ${SRCS:.cpp=.o}
 
-NAME	= serialize
+NAME	= templates
 
 CXX		= clang++
 
