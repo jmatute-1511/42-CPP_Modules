@@ -6,7 +6,7 @@
 /*   By: jmatute- <jmatute-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 19:28:04 by jmatute-          #+#    #+#             */
-/*   Updated: 2022/10/08 15:26:22 by jmatute-         ###   ########.fr       */
+/*   Updated: 2022/10/10 16:14:33 by jmatute-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ void identify(Base* hide) {
 void identify(Base& hide){
 	try
 	{
+		
 		if (dynamic_cast<A*>(&hide))
 			std::cout << "type of object is A" << std::endl;
 		else if (dynamic_cast<B*>(&hide))
