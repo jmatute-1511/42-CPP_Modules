@@ -21,7 +21,7 @@ CXX		= clang++
 
 RM		= rm -f
 
-CXXFLAGS	= -Wall -Wextra -Werror  #-fsanitize=address
+CXXFLAGS	=# -Wall -Wextra -Werror  #-fsanitize=address
 
 
 ${NAME}:	${OBJS} Makefile 

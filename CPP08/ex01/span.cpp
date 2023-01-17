@@ -36,17 +36,40 @@ void Span::addNumber(int num){
 		throw Filled_exception();
 }
 
+void Span::addNumber(std::vector<int>::iterator it, std::vector<int>::iterator end){
+	
+	while(it != end)
+	{
+		if (_filled <  _max_lenght){
+			_my_vector.push_back((*it));
+			sort_my_vector();
+			_filled +=1;
+		}
+		else
+			throw Filled_exception();
+		it++;
+	}
+}
+
 unsigned int Span::shortestSpan(){
 	
-	if (_my_vector.size() > 1){
-		int diff = _my_vector[1] - _my_vector[0];
-		return diff;
-	}
-	else
+	int n1, n2;
+	int diff = static_cast<int> (*(_my_vector.end() - 1));
+	std::vector<int>::iterator it = _my_vector.begin();
+	std::vector<int>::iterator end = _my_vector.end();
+	if (_my_vector.size() <= 1)
 		throw NotSpan_exception();
-	
-	return 0;
-
+	while (it != (end - 1 ))
+	{
+		if (diff > (*(it + 1))  - (*it))
+		{
+			n1 = (static_cast<int>(*it)) ;
+			n2 = (static_cast<int>(*(it + 1)));
+			diff = n2 - n1;
+		}
+		it++;
+	}
+	return diff;
 }
 
 unsigned int Span::longestSpan(){

@@ -32,13 +32,19 @@ int main()
 	}
 	try
 	{
-		Span sp = Span(5);
-		
-		sp.addNumber(5);
-		sp.addNumber(3);
-		sp.addNumber(17);
-		sp.addNumber(9);
-		sp.addNumber(11);
+		Span sp = Span(6);
+		std::vector<int> vec;
+
+		for(int it = 0; it < 20; it += it + 1)
+		{
+			std::cout << it << std::endl;
+			vec.push_back(it);
+		}
+
+		std::vector<int>::iterator begin = vec.begin();
+		std::vector<int>::iterator end = vec.end();
+		sp.addNumber(begin, end);
+		sp.addNumber(15);
 		std::cout << sp.shortestSpan() << std::endl;
 		std::cout << sp.longestSpan() << std::endl;
 	}
