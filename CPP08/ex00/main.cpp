@@ -21,7 +21,7 @@ int main(void){
 	{
 		vect.push_back(i);
 	}
-	unsigned int a = easyfind(vect, 999);
+	unsigned int a = easyfind(vect, 1000);
 	return a;
 	
 }

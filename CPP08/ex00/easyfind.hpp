@@ -32,7 +32,7 @@ unsigned int easyfind(T& stl_data, int num){
 	try
 	{
 		it = std::find(stl_data.begin(), stl_data.end(), num);
-		if(static_cast<int> (*stl_data.end()) == num || it != stl_data.end()){
+		if(it != stl_data.end()){
 			std::cout << "Element " << num << " found in this position " << static_cast<int> (*it) << std::endl;
 			return static_cast<unsigned int> (*it);
 		}
