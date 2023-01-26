@@ -54,7 +54,7 @@ void Span::addNumber(std::vector<int>::iterator it, std::vector<int>::iterator e
 unsigned int Span::shortestSpan(){
 	
 	int n1, n2;
-	int diff = static_cast<int> (*(_my_vector.end() - 1));
+	int diff = Span::longestSpan();
 	std::vector<int>::iterator it = _my_vector.begin();
 	std::vector<int>::iterator end = _my_vector.end();
 	if (_my_vector.size() <= 1)
